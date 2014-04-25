@@ -4,7 +4,7 @@
  
  
  
-## Contributors
+### Contributors
 
 * [Prashanth Sams](https://github.com/prashanth-sams)
 * [Karthikeyan Annamalai](https://github.com/kalakkumkarthikeyan)
@@ -13,5 +13,3 @@
   
  
  
- 
- www.seleniumworks.com
