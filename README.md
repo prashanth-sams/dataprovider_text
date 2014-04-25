@@ -4,14 +4,14 @@ Dataprovider Text | Properties
  TestNG DataProvider for text and properties files |  For Selenium Newbies & Intermediate Users
  
  
- Contributors
- ------------
+ **Contributors**
+ =================
  
- Prashanth Sams
- Karthikeyan Annamalai
- 
- 
+ 'Prashanth Sams'
+ 'Karthikeyan Annamalai'
  
  
  
- www.seleniumworks.com
+ 
+ 
+ #www.seleniumworks.com
