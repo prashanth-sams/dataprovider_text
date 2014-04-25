@@ -53,7 +53,7 @@ public class Google {
       while (stKey1.hasMoreElements()) {
 
           //  search google via keyword 1
-          driver.findElement(By.name("q")).sendKeys();
+          driver.findElement(By.name("q")).sendKeys(stKey1.nextElement());
           driver.findElement(By.name("q")).submit();
           Thread.sleep(4000);
           Boolean a = driver.getTitle().contains("Prashanth Sams"); 
