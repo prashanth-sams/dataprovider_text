@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Text2TestData {
@@ -19,13 +20,13 @@ public class Text2TestData {
 
 	
 	
-	public HashMap<String,String[]> text2TestData(){
+	public HashMap<String,String[]> getData(){
 		
 		 FileInputStream fs;
 		 HashMap<String,String[]> keyValuePair=new HashMap<String,String[]>();
 		try {
 			
-			  fs = new FileInputStream(System.getProperty(fileLocation));
+			  fs = new FileInputStream(fileLocation);
 			  DataInputStream in = new DataInputStream(fs);
 			  BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			  
@@ -33,11 +34,9 @@ public class Text2TestData {
 			  //Read File Line By Line
 			  while ((stringLine = br.readLine()) != null)   {
 			  // Print the content on the console
-			  System.out.println (stringLine);
 			  String[] keyValue=stringLine.split("=");
 			  keyValuePair.put(keyValue[0],keyValue[1].split(","));
-			  
-			  }
+              }
 			  //Close the input stream
 			  in.close();
 			  
@@ -46,7 +45,7 @@ public class Text2TestData {
 		}
 
 	  
-	     return null;
+	     return keyValuePair;
 		
 		
 	}
