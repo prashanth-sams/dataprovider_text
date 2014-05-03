@@ -25,6 +25,7 @@
         <module name="dataproviderDemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="1.7" />
   </component>
 </project>
 

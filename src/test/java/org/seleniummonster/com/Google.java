@@ -18,12 +18,6 @@ public class Google {
 
     @DataProvider(name="keywords")
     public Object[][] data() throws Exception {
-
-        System.out.println("The file is @ "+System.getProperty("user.dir")+"/config.properties");
-        FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"/config.properties");
-        Properties prop = new Properties();
-        prop.load(fs);
-
         HashMap<String,String[]> dataSet= new Text2TestData(System.getProperty("user.dir")+"\\config.properties").getData();
         //Let us assume username and password dataset
         int size =2;
@@ -32,24 +26,9 @@ public class Google {
         String passwordStrings[]=dataSet.get("password");
         for(int i=0;i<size;i++)
         {
-
             creds[i][0]=usernameStrings[i];
-                creds[i][1]=passwordStrings[i];
-
+            creds[i][1]=passwordStrings[i];
         }
-
-        for(int i=0;i<size;i++)
-        {
-        for(int j=0;j<2;j++)
-        {
-            System.out.println("::::::::::::::::::::::::: ,"+ creds[i][j]);
-
-        }
-        }
-
-
-
-
         return creds;
     }
 
@@ -64,7 +43,7 @@ public class Google {
     @Test(dataProvider = "keywords", description = "Google_Test")
     public void search(String username, String password) throws Exception {
 
-       driver.get("http://www.google.co.in");
+        driver.get("http://www.google.co.in");
 
         // search google via keyword 1
         driver.findElement(By.name("q")).clear();
